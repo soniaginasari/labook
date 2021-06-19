@@ -1,0 +1,112 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:tools="http://schemas.android.com/tools"
+    tools:context=".CrudLaboratoriumActivity"
+    android:background="#fff">
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/recyclerView"
+        android:scrollbars="vertical"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:paddingLeft="8dp"
+        android:paddingRight="8dp"
+        android:paddingTop="16dp">
+    </androidx.recyclerview.widget.RecyclerView>
+        <RelativeLayout
+            android:id="@+id/rl_laboran"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center">
+            <ImageView
+                android:id="@+id/img_laboran"
+                android:layout_width="50dp"
+                android:layout_height="50dp"
+                android:layout_margin="10dp"
+                android:src="@drawable/teamwork"/>
+            <Button
+                android:id="@+id/btn_laboran"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_horizontal"
+                android:layout_margin="10dp"
+                android:layout_marginTop="16dp"
+                android:background="@drawable/button_background_blue"
+                android:paddingLeft="16dp"
+                android:paddingRight="16dp"
+                android:onClick="laboran"
+                android:layout_toRightOf="@+id/img_laboran"
+                android:text="Laboran Laboratorium"
+                android:textColor="#FFF" />
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center">
+            <ImageView
+                android:id="@+id/img_berita"
+                android:layout_width="50dp"
+                android:layout_height="50dp"
+                android:layout_margin="10dp"
+                android:src="@drawable/newspaper"/>
+            <Button
+                android:id="@+id/btn_berita"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_horizontal"
+                android:layout_margin="10dp"
+                android:layout_marginTop="16dp"
+                android:background="@drawable/button_background_blue"
+                android:paddingLeft="16dp"
+                android:paddingRight="16dp"
+                android:onClick="berita"
+                android:layout_toRightOf="@+id/img_berita"
+                android:text="Berita Laboratorium"
+                android:textColor="#FFF" />
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:id="@+id/rl_verifikasi"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center">
+            <ImageView
+                android:id="@+id/img_verif"
+                android:layout_width="50dp"
+                android:layout_height="50dp"
+                android:layout_margin="10dp"
+                android:src="@drawable/immigration"/>
+            <Button
+                android:id="@+id/btn_verif"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_horizontal"
+                android:layout_margin="10dp"
+                android:layout_marginTop="16dp"
+                android:background="@drawable/button_background_blue"
+                android:paddingLeft="16dp"
+                android:paddingRight="16dp"
+                android:onClick="verif"
+                android:layout_toRightOf="@+id/img_verif"
+                android:text="Verifikasi Data"
+                android:textColor="#FFF" />
+        </RelativeLayout>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/txt"
+            android:textSize="50sp"
+            android:textColor="@color/blackTextColor"
+            android:text="id_lab"
+            />
+
+    </LinearLayout>
+</ScrollView>

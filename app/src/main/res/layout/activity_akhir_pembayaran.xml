@@ -1,0 +1,228 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical" android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/whiteBodyColor"
+    >
+    <androidx.cardview.widget.CardView
+        android:layout_width="match_parent"
+        android:layout_height="80dp"
+        >
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@color/designMainColor"
+            android:layout_margin="5dp">
+
+            <ImageView
+                android:layout_width="50dp"
+                android:layout_height="50dp"
+                android:src="@drawable/ic_warning"
+                android:layout_centerVertical="true"
+                android:id="@+id/img_warn"/>
+            <TextView
+                android:layout_marginLeft="15dp"
+                android:layout_marginRight="15dp"
+                android:layout_marginTop="10dp"
+                android:layout_marginBottom="10dp"
+                android:id="@+id/no1"
+                android:textColor="@color/whiteTextColor"
+                android:textSize="16sp"
+                android:drawablePadding="10dp"
+                android:layout_toRightOf="@+id/img_warn"
+                android:gravity="left|center"
+                android:paddingLeft="10dp"
+                android:text="Segera lakukan pembayaran Anda sebelum waktu habis"
+                android:layout_width="match_parent"
+                android:layout_height="50dp"/>
+        </RelativeLayout>
+    </androidx.cardview.widget.CardView>
+
+    <androidx.cardview.widget.CardView
+        android:layout_marginTop="5dp"
+        android:layout_width="match_parent"
+        android:layout_height="60dp">
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:layout_margin="5dp"
+            android:background="@color/whiteBodyColor">
+
+            <TextView
+                android:id="@+id/bpd"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="BATAS WAKTU PEMBAYARAN"
+                android:textColor="#4CAF50"
+                android:layout_marginLeft="8dp"
+                android:layout_marginTop="5dp"
+                android:textSize="13sp" />
+            <TextView
+                android:layout_below="@+id/bpd"
+                android:id="@+id/tgl_tenggat"
+                android:textColor="#000"
+                android:layout_marginLeft="8dp"
+                android:text="-"
+                android:textSize="16sp"
+                android:textStyle="bold"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"/>
+        </RelativeLayout>
+    </androidx.cardview.widget.CardView>
+
+    <androidx.cardview.widget.CardView
+        android:layout_width="match_parent"
+        android:layout_height="55dp"
+        >
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:layout_marginLeft="5dp"
+            android:layout_marginRight="5dp"
+            android:background="@color/whiteBodyColor">
+            <TextView
+                android:id="@+id/teks1"
+                android:text="JUMLAH TAGIHAN"
+                android:textColor="#4CAF50"
+                android:textSize="13sp"
+                android:layout_marginLeft="8dp"
+                android:layout_marginTop="5dp"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"/>
+            <TextView
+                android:layout_below="@+id/teks1"
+                android:id="@+id/total_harga"
+                android:textColor="#000"
+                android:text="Rp. 23000"
+                android:layout_marginLeft="8dp"
+                android:textSize="16sp"
+                android:textStyle="bold"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"/>
+        </RelativeLayout>
+    </androidx.cardview.widget.CardView>
+
+    <androidx.cardview.widget.CardView
+        android:id="@+id/met_cash"
+        android:layout_marginRight="5dp"
+        android:layout_marginLeft="5dp"
+        android:layout_width="match_parent"
+        android:layout_height="90dp">
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="90dp"
+            android:background="@color/whiteBodyColor">
+            <TextView
+                android:id="@+id/teks3"
+                android:text="METODE PEMBAYARAN"
+                android:textColor="#4CAF50"
+                android:layout_marginLeft="8dp"
+                android:layout_marginTop="5dp"
+                android:textSize="13sp"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"/>
+            <ImageView
+                android:layout_marginTop="5dp"
+                android:id="@+id/logo"
+                android:layout_marginLeft="8dp"
+                android:layout_below="@+id/teks3"
+                android:src="@drawable/cash_payment"
+                android:layout_width="50dp"
+                android:layout_height="50dp"/>
+            <TextView
+                android:id="@+id/met_pembayaran"
+                android:layout_marginTop="10dp"
+                android:layout_marginLeft="15dp"
+                android:layout_below="@+id/teks3"
+                android:layout_toRightOf="@id/logo"
+                android:textColor="#000"
+                android:text="Cash"
+                android:textSize="14dp"
+                android:textStyle="bold"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"/>
+            <TextView
+                android:layout_marginLeft="15dp"
+                android:layout_below="@+id/met_pembayaran"
+                android:layout_toRightOf="@id/logo"
+                android:textColor="#000"
+                android:text="Pembayaran melalui cash langsung dengan laboran"
+                android:textSize="14dp"
+                android:textStyle="bold"
+                android:layout_marginRight="5dp"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"/>
+        </RelativeLayout>
+    </androidx.cardview.widget.CardView>
+
+    <androidx.cardview.widget.CardView
+        android:id="@+id/met_transfer"
+        android:layout_marginRight="5dp"
+        android:layout_marginLeft="5dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@color/whiteBodyColor"
+            >
+            <TextView
+                android:id="@+id/teks4"
+                android:text="METODE PEMBAYARAN"
+                android:textColor="#4CAF50"
+                android:layout_marginLeft="8dp"
+                android:layout_marginTop="5dp"
+                android:textSize="13sp"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"/>
+            <ImageView
+                android:layout_marginTop="5dp"
+                android:id="@+id/logo_trf"
+                android:layout_marginLeft="8dp"
+                android:layout_below="@+id/teks4"
+                android:src="@drawable/bank_transfer"
+                android:layout_width="50dp"
+                android:layout_height="50dp"/>
+            <TextView
+                android:id="@+id/met_pembayaran_trf"
+                android:layout_marginTop="10dp"
+                android:layout_marginLeft="15dp"
+                android:layout_below="@+id/teks4"
+                android:layout_toRightOf="@id/logo_trf"
+                android:textColor="#000"
+                android:text="Transfer Bank"
+                android:textSize="14dp"
+                android:textStyle="bold"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"/>
+            <TextView
+                android:layout_marginLeft="15dp"
+                android:layout_below="@+id/met_pembayaran_trf"
+                android:layout_toRightOf="@id/logo_trf"
+                android:textColor="#000"
+                android:text="Pembayaran bisa melalui \n Bank BNI 820333455 \n Atas nama Laboratorium"
+                android:textSize="14dp"
+                android:textStyle="bold"
+                android:layout_marginRight="5dp"
+                android:layout_marginBottom="10dp"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"/>
+        </RelativeLayout>
+    </androidx.cardview.widget.CardView>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="5dp">
+        <Button
+            android:background="@drawable/button_background_blue"
+            android:text="KEMBALI KE LIST SEWA"
+            android:textColor="#fff"
+            android:layout_alignParentBottom="true"
+            android:layout_gravity="bottom"
+            android:onClick="bayar"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"/>
+    </RelativeLayout>
+
+
+</LinearLayout>

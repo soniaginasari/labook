@@ -1,0 +1,148 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout android:orientation="vertical"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_marginRight="15dp"
+    android:layout_marginLeft="15dp"
+    android:layout_marginTop="5dp"
+    android:layout_marginBottom="15dp"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <androidx.cardview.widget.CardView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/cvLaboran"
+        >
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            >
+            <de.hdodenhof.circleimageview.CircleImageView
+                android:id="@+id/ivLab"
+                android:layout_width="60dp"
+                android:layout_height="60dp"
+                app:civ_border_width="2dp"
+                app:civ_border_color="@color/imageBorderColor"
+                android:src="@drawable/default_pic"
+                />
+
+
+            <TextView
+                android:id="@+id/nama_laboran"
+                android:layout_width="340dp"
+                android:layout_height="wrap_content"
+                android:text="Nama Laboran"
+                android:textColor="#000"
+                android:textSize="18dp"
+                android:fontFamily="@font/montserrat_bold"
+                android:layout_marginLeft="10dp"
+                android:layout_marginRight="10dp"
+                android:layout_toRightOf="@+id/ivLab"
+                />
+
+            <TextView
+                android:id="@+id/no_hp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="No Hp"
+                android:textColor="#000"
+                android:textSize="15dp"
+                android:fontFamily="@font/montserrat_regular"
+                android:layout_marginLeft="10dp"
+                android:layout_marginRight="10dp"
+                android:layout_toRightOf="@+id/ivLab"
+                android:layout_below="@+id/nama_laboran"/>
+
+            <TextView
+                android:id="@+id/hak_akses"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="hak_akses"
+                android:textColor="#000"
+                android:textSize="15dp"
+                android:fontFamily="@font/montserrat_regular"
+                android:layout_marginLeft="10dp"
+                android:layout_marginRight="10dp"
+                android:layout_toRightOf="@+id/ivLab"
+                android:layout_marginBottom="10dp"
+                android:layout_below="@+id/no_hp"/>
+
+            <RelativeLayout
+                android:id="@+id/rl"
+                android:layout_below="@+id/ivLab"
+                android:layout_toRightOf="@+id/ivLab"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <RelativeLayout
+                    android:id="@+id/rl_edit"
+                    android:layout_marginTop="10dp"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content">
+
+                    <ImageView
+                        android:id="@+id/edit"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:adjustViewBounds="true"
+                        android:cropToPadding="true"
+                        android:maxWidth="30dp"
+                        android:layout_margin="10dp"
+                        android:src="@drawable/edit" />
+
+                    <TextView
+                        android:id="@+id/txt_edit"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="10dp"
+                        android:text="Edit"
+                        android:textColor="@color/miniDescription"
+                        android:textSize="15sp"
+                        android:fontFamily="@font/montserrat_regular"
+                        android:layout_toRightOf="@+id/edit"
+                        />
+
+                </RelativeLayout>
+
+                <RelativeLayout
+                    android:id="@+id/rl_hapus"
+                    android:layout_toRightOf="@+id/rl_edit"
+                    android:layout_marginLeft="30dp"
+                    android:layout_marginTop="10dp"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content">
+
+                    <ImageView
+                        android:id="@+id/hapus"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:adjustViewBounds="true"
+                        android:cropToPadding="true"
+                        android:maxWidth="30dp"
+                        android:layout_margin="10dp"
+                        android:src="@drawable/trash" />
+
+                    <TextView
+                        android:id="@+id/txt_hapus"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Hapus"
+                        android:layout_marginTop="10dp"
+                        android:textColor="@color/miniDescription"
+                        android:textSize="15sp"
+                        android:fontFamily="@font/montserrat_regular"
+                        android:layout_marginBottom="10dp"
+                        android:layout_toRightOf="@+id/hapus"
+                        />
+
+                </RelativeLayout>
+            </RelativeLayout>
+
+        </RelativeLayout>
+    </androidx.cardview.widget.CardView>
+</LinearLayout>

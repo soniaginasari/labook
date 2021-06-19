@@ -1,0 +1,97 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    android:orientation="vertical"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:layout_marginRight="15dp"
+    android:layout_marginLeft="15dp"
+    android:layout_marginTop="5dp"
+    android:layout_marginBottom="15dp"
+    android:background="@color/contentBodyColor"
+    >
+
+    <androidx.cardview.widget.CardView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/cvLaboran"
+        android:background="@color/contentBodyColor"
+        >
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            >
+
+
+            <TextView
+                android:id="@+id/nama_laboran"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Nama Laboran"
+                android:textColor="#000"
+                android:textSize="18dp"
+                android:fontFamily="@font/montserrat_bold"
+                android:layout_marginLeft="10dp"
+                android:layout_marginRight="10dp"
+                android:layout_toRightOf="@+id/ivLab"
+                android:layout_toLeftOf="@id/panggil"
+                />
+
+
+            <TextView
+                android:id="@+id/no_hp"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="No Hp"
+                android:textColor="#000"
+                android:textSize="15dp"
+                android:layout_marginLeft="10dp"
+                android:layout_marginRight="10dp"
+                android:fontFamily="@font/montserrat_regular"
+                android:layout_marginTop="5dp"
+                android:layout_toRightOf="@+id/ivLab"
+                android:layout_toLeftOf="@id/panggil"
+                android:layout_below="@+id/nama_laboran"/>
+
+            <TextView
+                android:id="@+id/hak_akses"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Hak Akses"
+                android:textColor="#000"
+                android:textSize="15dp"
+                android:fontFamily="@font/montserrat_regular"
+                android:layout_marginTop="5dp"
+                android:layout_marginLeft="10dp"
+                android:layout_marginRight="10dp"
+                android:layout_marginBottom="10dp"
+                android:layout_toLeftOf="@id/panggil"
+                android:layout_toRightOf="@+id/ivLab"
+                android:layout_below="@+id/no_hp"/>
+
+
+            <ImageView
+                android:id="@+id/panggil"
+                android:layout_width="30dp"
+                android:layout_height="30dp"
+                android:src="@drawable/ic_baseline_call_24"
+                android:scaleType="centerCrop"
+                android:layout_alignParentRight="true"
+                android:layout_below="@+id/nama_laboran"
+                android:layout_marginRight="40dp"
+                />
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Panggil"
+                android:layout_below="@id/panggil"
+                android:layout_alignLeft="@id/panggil"
+                android:layout_marginRight="20dp"
+                />
+
+        </RelativeLayout>
+    </androidx.cardview.widget.CardView>
+</LinearLayout>

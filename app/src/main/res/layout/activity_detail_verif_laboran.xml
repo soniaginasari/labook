@@ -1,0 +1,262 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.coordinatorlayout.widget.CoordinatorLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/contentBodyColor"
+    tools:context=".DetailVerifLaboranActivity">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        tools:showIn="@layout/app_bar_main"
+        style="@style/parent">
+
+        <androidx.core.widget.NestedScrollView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            >
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+
+                <RelativeLayout
+                    android:id="@+id/rel1"
+                    android:background="#444F63"
+                    android:orientation="horizontal"
+                    android:layout_width="match_parent"
+                    android:layout_height="288dp">
+
+                    <ImageView
+                        android:layout_centerHorizontal="true"
+                        android:id="@+id/foto_lab"
+                        android:layout_width="380dp"
+                        android:layout_height="380dp"
+                        />
+                    <TextView
+                        android:id="@+id/nama"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentBottom="true"
+                        android:gravity="center"
+                        android:layout_marginLeft="15dp"
+                        android:paddingLeft="10dp"
+                        android:paddingRight="10dp"
+                        android:background="#DDD9D9"
+                        android:textColor="#000"
+                        android:fontFamily="@font/montserrat_bold"
+                        android:text="Laboratorium"
+                        android:textSize="22sp"/>
+                </RelativeLayout>
+
+
+                <TextView
+                    android:id="@+id/ket_crud"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textSize="20sp"
+                    android:layout_marginBottom="10dp"
+                    android:layout_marginTop="10dp"
+                    android:fontFamily="@font/montserrat_bold"
+                    android:textColor="@color/black"
+                    android:layout_marginLeft="20dp"
+                    android:text="Update Data" />
+
+                <View
+                    android:id="@+id/garis"
+                    android:layout_width="match_parent"
+                    android:layout_height="0.5dp"
+                    android:layout_marginTop="5dp"
+                    android:layout_marginBottom="5dp"
+                    android:layout_marginLeft="20dp"
+                    android:layout_marginRight="20dp"
+                    android:background="#979797" />
+
+                <RelativeLayout
+                    android:id="@+id/rl_lab"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+
+                    <androidx.cardview.widget.CardView
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_marginLeft="30dp"
+                        android:layout_marginTop="5dp"
+                        android:layout_marginRight="2dp"
+                        android:layout_marginBottom="5dp"
+                        android:minHeight="120dp"
+                        app:cardBackgroundColor="@color/whiteBodyColor"
+                        app:cardCornerRadius="16dp"
+                        app:cardElevation="2dp">
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:layout_gravity="center"
+                            android:layout_marginLeft="20dp"
+                            android:orientation="vertical">
+
+                            <TextView
+                                style="@style/viewParent.headerText"
+                                android:text="Detail Laboratorium"
+                                android:textColor="@color/primaryTextColor" />
+
+                            <RelativeLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content">
+
+                                <TextView
+                                    android:id="@+id/alamat"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:layout_marginTop="1dp"
+                                    android:layout_marginLeft="20dp"
+                                    android:text="alamat"
+                                    android:textSize="14sp"
+                                    android:textStyle="bold"
+                                    />
+
+                                <TextView
+                                    android:id="@+id/no_telp"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="20dp"
+                                    android:layout_below="@+id/alamat"
+                                    android:layout_marginLeft="20dp"
+                                    android:text="08123"
+                                    android:textSize="14sp"
+                                    android:textStyle="bold" />
+
+                            </RelativeLayout>
+
+                        </LinearLayout>
+
+                    </androidx.cardview.widget.CardView>
+
+                    <ImageView
+                        android:layout_width="60dp"
+                        android:layout_height="60dp"
+                        android:layout_centerVertical="true"
+                        android:elevation="13dp"
+                        android:src="@drawable/address" />
+
+                </RelativeLayout>
+
+
+                <RelativeLayout
+                    android:id="@+id/rl_layanan"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+
+                    <androidx.cardview.widget.CardView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="30dp"
+                        android:layout_marginTop="5dp"
+                        android:layout_marginRight="2dp"
+                        android:layout_marginBottom="10dp"
+                        android:minHeight="120dp"
+                        app:cardBackgroundColor="@color/whiteBodyColor"
+                        app:cardCornerRadius="16dp"
+                        app:cardElevation="2dp">
+
+                        <RelativeLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center"
+                            android:layout_marginLeft="20dp"
+                            >
+
+                            <TextView
+                                android:id="@+id/det_layanan"
+                                style="@style/viewParent.headerText"
+                                android:text="Detail Layanan"
+                                android:textColor="@color/primaryTextColor" />
+
+                            <TextView
+                                android:id="@+id/satuan"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_marginLeft="20dp"
+                                android:text="satuan :"
+                                android:textSize="14sp"
+                                android:layout_below="@+id/det_layanan"
+                                android:textStyle="bold" />
+
+                            <TextView
+                                android:id="@+id/harga"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_marginLeft="20dp"
+                                android:text="8000"
+                                android:textSize="14sp"
+                                android:layout_below="@+id/satuan"
+                                android:textStyle="bold" />
+
+                            <TextView
+                                android:id="@+id/min_unit"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_marginLeft="20dp"
+                                android:text="laboratorium deskripsi"
+                                android:textSize="14sp"
+                                android:layout_below="@+id/harga"
+                                android:textStyle="bold" />
+
+                            <TextView
+                                android:id="@+id/deskripsi"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_marginLeft="20dp"
+                                android:text="laboratorium deskripsi"
+                                android:textSize="14sp"
+                                android:layout_below="@+id/min_unit"
+                                android:textStyle="bold" />
+
+                        </RelativeLayout>
+
+                    </androidx.cardview.widget.CardView>
+
+                    <ImageView
+                        android:layout_width="60dp"
+                        android:layout_height="60dp"
+                        android:layout_centerVertical="true"
+                        android:elevation="13dp"
+                        android:src="@drawable/sku" />
+
+                </RelativeLayout>
+
+
+            </LinearLayout>
+        </androidx.core.widget.NestedScrollView>
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+    <LinearLayout
+        android:id="@+id/LinearLayout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:orientation="horizontal"
+        app:layout_behavior="@string/appbar_scrolling_view_behavior"
+        android:layout_gravity="bottom">
+
+        <Button
+            android:id="@+id/btn_verif"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal"
+            android:layout_marginTop="16dp"
+            android:background="@drawable/button_background_blue"
+            android:paddingLeft="16dp"
+            android:paddingRight="16dp"
+            android:text="Verifikasi Data"
+            android:layout_alignParentBottom="true"
+            android:textColor="#FFF" />
+
+
+
+    </LinearLayout>
+
+
+</androidx.coordinatorlayout.widget.CoordinatorLayout>

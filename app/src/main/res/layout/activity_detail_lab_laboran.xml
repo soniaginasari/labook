@@ -1,0 +1,124 @@
+
+<ScrollView
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".DetailLabLaboranActivity"
+    android:background="@color/contentBodyColor"
+    android:orientation="vertical">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        android:layout_marginBottom="20dp">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@color/designMainColor">
+
+            <TextView
+                android:id="@+id/nama_lab"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_marginTop="10dp"
+                android:text="Nama Laboratorium"
+                android:textColor="#FFF"
+                android:textSize="20sp"
+                android:layout_marginLeft="10dp"
+                android:fontFamily="@font/montserrat_bold"
+                android:layout_toRightOf="@+id/ivLab"
+                />
+
+
+
+            <de.hdodenhof.circleimageview.CircleImageView
+                android:id="@+id/ivLab"
+                android:layout_marginTop="10dp"
+                android:layout_width="100dp"
+                android:layout_height="100dp"
+                app:civ_border_width="5dp"
+                app:civ_border_color="@color/imageBorderColor"
+                android:src="@drawable/default_pic"
+                />
+
+            <View
+                android:id="@+id/garis"
+                android:layout_below="@id/nama_lab"
+                android:layout_toRightOf="@id/ivLab"
+                android:layout_width="match_parent"
+                android:layout_height="0.5dp"
+                android:layout_marginTop="5dp"
+                android:layout_marginBottom="5dp"
+                android:background="#FFFFFF" />
+
+            <TextView
+                android:id="@+id/alamat"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/garis"
+                android:text="alamat"
+                android:textColor="#FFFFFF"
+                android:layout_marginLeft="10dp"
+                android:layout_marginRight="10dp"
+                android:textSize="15sp"
+                android:layout_toRightOf="@+id/ivLab"
+                android:fontFamily="@font/montserrat_regular"/>
+            <TextView
+                android:id="@+id/no_telp"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/alamat"
+                android:text="no_hp"
+                android:textColor="#FFFFFF"
+                android:layout_marginLeft="10dp"
+                android:textSize="15sp"
+                android:layout_toRightOf="@+id/ivLab"
+                android:layout_marginBottom="10dp"
+                android:layout_marginRight="10dp"
+                android:fontFamily="@font/montserrat_regular" />
+
+        </RelativeLayout>
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/recyclerView"
+            android:scrollbars="vertical"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+        </androidx.recyclerview.widget.RecyclerView>
+
+        <LinearLayout
+            android:id="@+id/LinearLayout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true"
+            android:orientation="vertical"
+            app:layout_behavior="@string/appbar_scrolling_view_behavior"
+            android:layout_gravity="bottom">
+
+            <Button
+                android:id="@+id/btn_tambah_bidang"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_horizontal"
+                android:layout_marginTop="16dp"
+                android:background="@drawable/button_background_blue"
+                android:paddingLeft="16dp"
+                android:paddingRight="16dp"
+                android:text="Tambah bidang"
+                android:layout_margin="50dp"
+                android:layout_alignParentBottom="true"
+                android:drawableLeft="@drawable/ic_baseline_add_24"
+                android:onClick="tambahBidang"
+                android:textColor="#FFF" />
+
+
+
+        </LinearLayout>
+
+    </LinearLayout>
+</ScrollView>

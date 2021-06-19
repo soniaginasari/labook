@@ -1,0 +1,270 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    app:layout_behavior="@string/appbar_scrolling_view_behavior"
+    tools:context=".MainLaboranActivity"
+    tools:showIn="@layout/app_bar_main_laboran"
+    style="@style/parent.contentLayout">
+    <androidx.swiperefreshlayout.widget.SwipeRefreshLayout
+        android:id="@+id/swipe_to_refresh_layout"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        tools:context=".MainLaboranActivity">
+
+    <androidx.core.widget.NestedScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <TextView
+                    android:id="@+id/textViewUser"
+                    style="@style/headerText"
+                    android:layout_width="250dp"
+                    android:maxLines="2"
+                    android:text="Hello Laboran!"
+                    android:layout_alignParentTop="true"
+                    android:layout_alignParentLeft="true"
+                    android:layout_centerVertical="true"/>
+
+                <de.hdodenhof.circleimageview.CircleImageView
+                    android:id="@+id/profileCircleImageView"
+                    android:layout_width="60dp"
+                    android:layout_height="60dp"
+                    app:civ_border_width="2dp"
+                    app:civ_border_color="@color/imageBorderColor"
+                    android:src="@drawable/default_pic"
+                    android:layout_alignParentRight="true" />
+
+                <ImageView
+                    android:id="@+id/notif"
+                    android:onClick="notif"
+                    android:layout_width="30dp"
+                    android:layout_height="30dp"
+                    android:layout_centerVertical="true"
+                    android:layout_marginRight="10dp"
+                    android:src="@drawable/ic_baseline_notifications_none_24"
+                    android:layout_toLeftOf="@id/profileCircleImageView"/>
+            </RelativeLayout>
+
+
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="20dp">
+
+                <androidx.cardview.widget.CardView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="20dp"
+                    app:cardCornerRadius="16dp"
+                    app:cardPreventCornerOverlap="false"
+                    app:cardBackgroundColor="@color/designMainColor"
+                    android:minHeight="200dp"
+                    android:layout_alignParentTop="true">
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center_vertical"
+                        android:gravity="center_vertical">
+
+                        <LinearLayout
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:padding="10dp"
+                            android:orientation="vertical"
+                            android:layout_weight="1">
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="Selamat Datang \n di Labook"
+                                android:textColor="@color/whiteBodyColor"
+                                android:textStyle="bold"
+                                android:textSize="20sp"/>
+
+                            <TextView
+                                android:layout_marginTop="15dp"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="Aplikasi Laboran"
+                                android:textColor="@color/whiteBodyColor"
+                                android:textStyle="bold"
+                                android:textSize="15sp"/>
+
+                        </LinearLayout>
+                        <ImageView
+                            android:layout_width="0dp"
+                            android:layout_weight="1"
+                            android:layout_height="wrap_content"
+                            android:adjustViewBounds="true"
+                            android:cropToPadding="true"
+                            android:src="@drawable/hero"
+                            android:elevation="44dp"/>
+                    </LinearLayout>
+                </androidx.cardview.widget.CardView>
+
+
+            </RelativeLayout>
+
+            <TextView
+                android:id="@+id/cal_bulan"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Bulan- Tahun"
+                android:textSize="25sp"
+                android:background="@color/contentBodyColor"
+                android:textColor="@color/blackTextColor"
+                android:textStyle="bold"/>
+
+            <com.github.sundeepk.compactcalendarview.CompactCalendarView
+                xmlns:app="http://schemas.android.com/apk/res-auto"
+                android:id="@+id/compactcalendar_view"
+                android:layout_width="fill_parent"
+                android:paddingRight="10dp"
+                android:paddingLeft="10dp"
+                android:layout_height="250dp"
+                app:compactCalendarTargetHeight="250dp"
+                app:compactCalendarTextSize="12sp"
+                app:compactCalendarBackgroundColor="@color/contentBodyColor"
+                app:compactCalendarTextColor="@color/black"
+                app:compactCalendarCurrentSelectedDayBackgroundColor="#E57373"
+                app:compactCalendarCurrentDayBackgroundColor="#B71C1C"
+                app:compactCalendarMultiEventIndicatorColor="@color/black"
+                />
+
+<!--            <RelativeLayout-->
+<!--                android:layout_width="match_parent"-->
+<!--                android:layout_height="wrap_content"-->
+<!--                android:layout_margin="10dp">-->
+
+
+<!--                <TextView-->
+<!--                    android:layout_alignParentTop="true"-->
+<!--                    android:layout_alignParentLeft="true"-->
+<!--                    android:text="Peminjaman Laboratorium"-->
+<!--                    style="@style/viewParent.headerText"/>-->
+
+                <!--                <TextView-->
+                <!--                    android:layout_alignParentRight="true"-->
+                <!--                    style="@style/viewParent"-->
+                <!--                    android:text="See All"-->
+                <!--                    android:layout_centerVertical="true"-->
+                <!--                    android:textSize="@dimen/headerMoreTextSize"-->
+                <!--                    android:textColor="@color/primaryTextColor"-->
+                <!--                    android:textStyle="bold"/>-->
+
+<!--            </RelativeLayout>-->
+
+            <!--remove the below layout with recycler view, use card poplar courses as model for design-->
+
+<!--            <LinearLayout-->
+<!--                android:layout_width="match_parent"-->
+<!--                android:layout_height="wrap_content"-->
+<!--                android:orientation="vertical">-->
+
+
+<!--                    <androidx.recyclerview.widget.RecyclerView-->
+<!--                        android:id="@+id/recyclerView_sewa_lab_laboran"-->
+<!--                        android:layout_width="wrap_content"-->
+<!--                        android:layout_height="wrap_content"-->
+<!--                        android:scrollbars="vertical"></androidx.recyclerview.widget.RecyclerView>-->
+
+<!--            </LinearLayout>-->
+
+
+
+            <!--remove the below layout with recycler view, use card poplar courses as model for design-->
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <TextView
+                android:id="@+id/ket"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Keterangan"
+                android:textColor="@color/blackTextColor"
+                android:textSize="16dp"
+                android:fontFamily="@font/montserrat_regular"
+                />
+
+            <de.hdodenhof.circleimageview.CircleImageView
+                android:id="@+id/warna1"
+                android:layout_width="20dp"
+                android:layout_height="20dp"
+                android:layout_marginTop="10dp"
+                android:src="#FD08C8"
+                android:layout_below="@+id/ket"
+                 />
+            <TextView
+                android:id="@+id/ket_warna1"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text=" : Menunggu Konfirmasi"
+                android:textColor="@color/blackTextColor"
+                android:layout_marginTop="10dp"
+                android:textSize="14dp"
+                android:fontFamily="@font/montserrat_regular"
+                android:layout_below="@+id/ket"
+                android:layout_toRightOf="@+id/warna1"
+                />
+
+            <de.hdodenhof.circleimageview.CircleImageView
+                android:id="@+id/warna2"
+                android:layout_width="20dp"
+                android:layout_height="20dp"
+                android:layout_marginTop="10dp"
+                android:src="#32E601"
+                android:layout_below="@+id/warna1"
+                />
+            <TextView
+                android:id="@+id/ket_warna2"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text=" : Dalam Pengerjaan"
+                android:textColor="@color/blackTextColor"
+                android:layout_marginTop="10dp"
+                android:textSize="14dp"
+                android:fontFamily="@font/montserrat_regular"
+                android:layout_below="@+id/warna1"
+                android:layout_toRightOf="@+id/warna2"
+                />
+
+            <de.hdodenhof.circleimageview.CircleImageView
+                android:id="@+id/warna3"
+                android:layout_width="20dp"
+                android:layout_height="20dp"
+                android:layout_below="@+id/warna2"
+                android:src="#F44336"
+                android:layout_marginTop="10dp"
+                />
+            <TextView
+                android:id="@+id/ket_warna3"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text=" : Selesai"
+                android:textColor="@color/blackTextColor"
+                android:layout_marginTop="10dp"
+                android:textSize="14dp"
+                android:fontFamily="@font/montserrat_regular"
+                android:layout_below="@+id/warna2"
+                android:layout_toRightOf="@+id/warna3"
+                />
+
+        </RelativeLayout>
+        </LinearLayout>
+    </androidx.core.widget.NestedScrollView>
+    </androidx.swiperefreshlayout.widget.SwipeRefreshLayout>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

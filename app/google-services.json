@@ -1,0 +1,47 @@
+{
+  "project_info": {
+    "project_number": "707182444701",
+    "project_id": "labook",
+    "storage_bucket": "labook.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:707182444701:android:4e4cf5f69cc0d36f631474",
+        "android_client_info": {
+          "package_name": "com.example.labook2"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "707182444701-rk51du7gfvtnbudh6fqfd66uu6en391l.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.example.labook2",
+            "certificate_hash": "9e964291e4f10d78a61f4c506b62fb2c5f58ccae"
+          }
+        },
+        {
+          "client_id": "707182444701-beds96si82s30vevbodof6cplipb779i.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyAOnGpaKpMXMdzmjIuW0gAqvBmVeRzO8YQ"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "707182444701-beds96si82s30vevbodof6cplipb779i.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

@@ -1,0 +1,192 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="com.example.labook2">
+    <!-- permission -->
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+    <uses-permission android:name="android.permission.VIBRATE" />
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.READ_PHONE_STATE" />
+    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.CALL_PHONE" />
+
+    <application
+        android:allowBackup="true"
+        android:icon="@mipmap/logo_labook"
+        android:label="@string/app_name"
+        android:requestLegacyExternalStorage="true"
+        android:roundIcon="@mipmap/logo_labook"
+        android:supportsRtl="true"
+        android:theme="@style/AppTheme">
+        <activity android:name=".TentangAplikasiActivity"
+            android:theme="@style/AppTheme.NoActionBar"></activity>
+        <activity android:name=".EditLaboranActivity"
+            android:theme="@style/AppTheme.NoActionBar"/>
+        <activity
+            android:name=".UploadPdfSelesaiActivity"
+            android:label="Upload File Hasil Uji"
+            android:theme="@style/ReferensiTheme" />
+        <activity
+            android:name=".ListSewaLaboranActivity"
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity
+            android:name=".DetailVerifLaboranActivity"
+            android:label="Detail Verifikasi"
+            android:theme="@style/ReferensiTheme" />
+        <activity
+            android:name=".ListVerifLaboranActivity"
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity android:name=".ChangePassActivity" />
+        <activity
+            android:name=".NotifikasiActivity"
+            android:label="Notifikasi"
+            android:theme="@style/ReferensiTheme" />
+
+        <service
+            android:name=".firebase.MessagingService"
+            android:stopWithTask="false">
+            <intent-filter>
+                <action android:name="com.google.firebase.MESSAGING_EVENT" />
+            </intent-filter>
+        </service>
+
+        <activity
+            android:name=".ChartPenyewaanActivity"
+            android:label="Grafik Peminjaman Laboratorium"
+            android:theme="@style/ReferensiTheme" />
+        <activity
+            android:name=".ListSewaActivity"
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity
+            android:name=".UploadBuktiActivity"
+            android:label="Upload Bukti Pembayaran"
+            android:theme="@style/ReferensiTheme" />
+        <activity
+            android:name=".DetailPembayaranLaboranActivity"
+            android:label="Detail Pembayaran Laboran"
+            android:theme="@style/ReferensiTheme" />
+        <activity
+            android:name=".DetailPembayaranActivity"
+            android:label="Detail Pembayaran"
+            android:theme="@style/ReferensiTheme" />
+        <activity
+            android:name=".AkhirPembayaranActivity"
+            android:label="Pembayaran Sewa"
+            android:theme="@style/ReferensiTheme" />
+        <activity
+            android:name=".PembayaranActivity"
+            android:label="Pembayaran Sewa"
+            android:theme="@style/ReferensiTheme" />
+        <activity android:name=".NoLabActivity" />
+        <activity
+            android:name=".CalendarSewaActivity"
+            android:label="Sewa Laboratorium Laboran"
+            android:theme="@style/ReferensiTheme" />
+        <activity
+            android:name=".TambahLaboranActivity"
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity
+            android:name=".TambahBeritaActivity"
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity
+            android:name=".LaboranLabActivity"
+            android:label="Laboran Laboratorium"
+            android:theme="@style/ReferensiTheme" />
+        <activity
+            android:name=".BeritaLaboranActivity"
+            android:label="Berita Laboratorium"
+            android:theme="@style/ReferensiTheme" />
+        <activity
+            android:name=".TambahLayananActivity"
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity
+            android:name=".TambahBidangActivity"
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity
+            android:name=".EditProfileActivity"
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity
+            android:name=".HistoryLabLaboranActivity"
+            android:label="History Penyewaan Laboran"
+            android:theme="@style/ReferensiTheme" />
+        <activity
+            android:name=".DetailSewaLabLaboranActivity"
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity android:name=".SewaLabLaboranActivity" />
+        <activity
+            android:name=".DetailLayananLaboranActivity"
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity
+            android:name=".DetailBidangLaboranActivity"
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity
+            android:name=".DetailLabLaboranActivity"
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity
+            android:name=".TambahLaboratoriumActivity"
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity
+            android:name=".CrudLaboratoriumActivity"
+            android:label="Data Laboratorium"
+            android:theme="@style/ReferensiTheme" />
+        <activity
+            android:name=".DetailBeritaActivity"
+            android:label="Detail Info"
+            android:theme="@style/ReferensiTheme" />
+        <activity
+            android:name=".AllBeritaActivity"
+            android:label="Semua Info Terkait"
+            android:theme="@style/ReferensiTheme" />
+        <activity
+            android:name=".MainLaboranActivity"
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity
+            android:name=".DetailSewaLabActivity"
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity
+            android:name=".SewaLabActivity"
+            android:label="History Penyewaan"
+            android:theme="@style/ReferensiTheme" />
+        <activity
+            android:name=".DetailLayananActivity"
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity
+            android:name=".LayananLaboratoriumActivity"
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity
+            android:name=".BidangLaboratoriumActivity"
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity
+            android:name=".CariLaboratoriumActivity"
+            android:label="Data Laboratorium"
+            android:theme="@style/ReferensiTheme" />
+        <activity
+            android:name=".NonLoginActivity"
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity
+            android:name=".SplashscreenActivity"
+            android:theme="@style/SplashTheme">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name=".ProfileActivity"
+            android:label="@string/title_activity_profile"
+            android:theme="@style/AppTheme.ProfileTheme" />
+        <activity
+            android:name=".MainPeminjamActivity"
+            android:label="@string/title_activity_main_peminjam"
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity
+            android:name=".RegisterActivity"
+            android:theme="@style/AppTheme.NoActionBar1" />
+        <activity
+            android:name=".LoginActivity"
+            android:theme="@style/AppTheme.NoActionBar1" />
+        <activity android:name=".MainActivity" />
+    </application>
+
+</manifest>
